@@ -6,7 +6,7 @@ GO
 IF NOT EXISTS (
     SELECT name
         FROM sys.databases
-        WHERE name = N'R2D21'
+        WHERE name = N'R2D22'
 )
 CREATE DATABASE DatabaseName
 GO
@@ -54,8 +54,8 @@ CREATE TABLE dbo.Stage
     Pocition_start_id [INT] NOT NULL,
     Pocition_final [INT] NOT NULL,
     CONSTRAINT pk_Stage PRIMARY KEY (Stage_id),
-    CONSTRAINT fk_Stage FOREIGN KEY (Pocition_start_id) REFERENCES Pocition_start(Pocition_start_id),
-    CONSTRAINT fk_Stage FOREIGN KEY (Pocition_final) REFERENCES Pocition_final(Pocition_final_id)
+    --CONSTRAINT fk_Stage FOREIGN KEY (Pocition_start_id) REFERENCES Pocition_start(Pocition_start_id),
+    --CONSTRAINT fk_Stage FOREIGN KEY (Pocition_final) REFERENCES Pocition_final(Pocition_final_id)
 
     -- specify more columns here
 );
@@ -112,9 +112,9 @@ CREATE TABLE dbo.Robot
     Coordinate_X [INT] NOT NULL,
     Coordinate_Y [INT] NOT NULL,
     CONSTRAINT pk_Robot PRIMARY KEY (Robot_id),
-    CONSTRAINT fk_Robot FOREIGN KEY (Work_id) REFERENCES otraMAMADA(Work_id),
-    CONSTRAINT fk_Robot FOREIGN KEY (Stage_id) REFERENCES otraMAMADA(Stage_id),
-    CONSTRAINT fk_Robot FOREIGN KEY (Orientation_id) REFERENCES otraMAMADA(Orientation_id)
+    --CONSTRAINT fk_Robot FOREIGN KEY (Work_id) REFERENCES otraMAMADA(Work_id),
+    --CONSTRAINT fk_Robot FOREIGN KEY (Stage_id) REFERENCES otraMAMADA(Stage_id),
+    --CONSTRAINT fk_Robot FOREIGN KEY (Orientation_id) REFERENCES otraMAMADA(Orientation_id)
     -- specify more columns here
 );
 GO
@@ -169,8 +169,8 @@ CREATE TABLE dbo.Sensor
     SensorVisual_id [INT] NOT NULL,
     SensorProximity_id [INT] NOT NULL,
     CONSTRAINT pk_Sensor PRIMARY KEY (Sensor_id),
-    CONSTRAINT fk_Sensor FOREIGN KEY (SensorVisual_id) REFERENCES otraMAMADA(SensorVisual_id),
-    CONSTRAINT fk_Sensor FOREIGN KEY (SensorProximity_id) REFERENCES otraMAMADA(SensorProximity_id)
+    --CONSTRAINT fk_Sensor FOREIGN KEY (SensorVisual_id) REFERENCES otraMAMADA(SensorVisual_id),
+    --CONSTRAINT fk_Sensor FOREIGN KEY (SensorProximity_id) REFERENCES otraMAMADA(SensorProximity_id)
     -- specify more columns here
 );
 GO

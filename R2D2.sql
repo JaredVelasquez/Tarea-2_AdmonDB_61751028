@@ -128,7 +128,28 @@ CREATE TABLE dbo.SensorProximity
 );
 GO
 
-
--- Select rows from a Table or View 'TableOrViewName' in schema 'SchemaName'
+-- Select rows from a Table or View 'visitaMedica' in schema 'dbo'
 SELECT * FROM dbo.Robot
+--WHERE 	/* add search conditions here */
+GO
+-- Select rows from a Table or View 'visitaDoctor' in schema 'dbo'
+SELECT * FROM dbo.Stage
+--WHERE 	/* add search conditions here */
+GO
+-- Select rows from a Table or View 'diagnostico' in schema 'dbo'
+SELECT * FROM dbo.Orientation
+--WHERE 	/* add search conditions here */
+GO
+-- Select rows from a Table or View 'diagnostico' in schema 'dbo'
+SELECT * FROM dbo.WORK
+--WHERE 	/* add search conditions here */
+GO-- Select rows from a Table or View 'diagnostico' in schema 'dbo'
+SELECT * FROM dbo.Sensor
+--WHERE 	/* add search conditions here */
+GO-- Select rows from a Table or View 'diagnostico' in schema 'dbo'
+SELECT * FROM dbo.SensorVisual
+--WHERE 	/* add search conditions here */
+GO-- Select rows from a Table or View 'diagnostico' in schema 'dbo'
+SELECT * FROM dbo.SensorProximity
+--WHERE 	/* add search conditions here */
 GO

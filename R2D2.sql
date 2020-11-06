@@ -6,9 +6,9 @@ GO
 IF NOT EXISTS (
     SELECT name
         FROM sys.databases
-        WHERE name = N'R2D22'
+        WHERE name = N'R2D24'
 )
-CREATE DATABASE DatabaseName
+CREATE DATABASE R2D24
 GO
 -- Create a new table called 'TableName' in schema 'SchemaName'
 -- Drop the table if it already exists
